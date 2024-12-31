@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form element</title>
+    <style>
+        /*한줄에 하나씩 들어가게 스타일 설정*/
+        input { display: block; } 
+    </style>
+</head>
+<body>
+    <!--
+        서버에 전송할 데이터 폼
+        action : 데이터를 전송할 서버의 URL
+        method : HTTP Method (=Request Method), GET/POST/PUT/PATCH/DELETE
+    -->
+    <form action="10.formelement.html" methon="get">
+        <input type="button" value="버튼">
+        <input type="checkbox" name ="male" value="male">남
+        <input type="checkbox" name="female" value="female">여
+        <input type="color" name="color">
+        <input type="date" name="date">
+        <input type="datetime-local" name="datetime-local">
+        <input type="email" name="email">
+        <input type="file" name="file">
+        <input type="hidden" name="hidden" value="hiddenvalue">
+        <input type="image" name="image" value="image" src="assets/말티즈.jpg"> <!--이미지버튼임, 이미지누르면 자동submit이 됨-->
+        <input type="month" name="month">
+        <input type="number" name="number">
+        <input type="password" name="password">
+        <input type="radio" name="radio" value="apple">사과
+        <input type="radio" name="radio" value="peach">복숭아
+        <input type="radio" name="radio" value="grape">포도 <!--여러개중에 하나 선택하는거라 이름을 똑같이 부여-->
+        <input type="range" name="range">
+        <input type="search" name="search">
+        <input type="tel" name="tel">
+        <input type="text" name="text">
+        <input type="time" name="time">
+        <input type="url" name="url">
+        <input type="week" name="week">
+    </form>
+
+    <select name="select">
+        <optgroup label="과일">
+            <option value="apple">사과</option>
+            <option value="peach">복숭아</option>
+            <option value="banana">바나나</option>
+        </optgroup>
+        <optgroup label="동물">
+            <option value="lion">사자</option>
+            <option value="tiger">호랑이</option>
+            <option value="deer">사슴</option>
+        </optgroup>
+    </select>
+
+    <textarea rows="10" cols="20">여기에 입력하세요!</textarea>
+
+    <fieldset>
+        <legend>회원가입폼</legend>
+        아이디 : <input type="text" name="uid">
+        비밀번호 : <input type="password" name="upass">
+    </fieldset>
+
+    <input type="submit" value="폼 데이터 전송">
+    <input type="reset" value="폼 초기화">
+</body>
+</html>
+<!--
+http://127.0.0.1:5500/10.formelement.html -- URL 
+?female=female -- 여기서부턴 쿼리스트링
+&color=%23f0d1ec
+&date=2024-12-20
+&datetime-local=2024-12-20T04%3A06
+&email=djksdlk%40naver.com
+&file=msdia80.dll
+&hidden=hiddenvalue
+&month=2024-04
+&number=4
+&password=aksdjfl%3Bkajsdf
+&radio=peach
+&range=50
+&search=asdfa
+&tel=0016464
+&text=asdfas
+&time=04%3A45
+&url=https%3A%2F%2Fwww.naver.com
+&week=2024-W52
+-->
